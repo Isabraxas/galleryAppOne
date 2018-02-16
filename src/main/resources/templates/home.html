@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>GalleryappAppliction</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+    <h1>Gallery App</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis earum eius est ipsum magni odit quisquam quo, voluptatibus? Accusantium amet aut culpa, in ipsum magni mollitia nam repellendus sapiente tempore.</p>
+    <div th:each="project : ${projects}">
+        <img th:src="@{'/assets/'+ ${project.projectName} + '.png'}"/>
+    </div>
+    <!--<div><a href="/link/test" >Ir a test</a></div>-->
+    <div><a th:href="${linkTest}" >Ir a test</a></div>
+</body>
+</html>
